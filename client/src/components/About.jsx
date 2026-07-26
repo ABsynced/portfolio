@@ -73,7 +73,7 @@ export default function About() {
           className="glass glass-hover md:col-span-2 flex flex-col justify-center gap-6 p-8"
         >
           {[
-            { label: 'Projects Completed', value: '3+' },
+            { label: 'Projects Completed', value: '4+' },
             { label: 'Tools & Languages', value: '10+' },
             { label: 'Looking For', value: '6-mo Internship' },
           ].map((stat) => (
