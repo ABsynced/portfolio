@@ -1,6 +1,25 @@
 // Fallback/placeholder projects, used if the API is unreachable or has no data yet.
 export const placeholderProjects = [
   {
+    _id: "p7",
+    title: "Decathlon Product & Sustainability Analytics",
+    description:
+      "Scraped Decathlon's full product catalog and found only 38.6% is their own in-house brand — making their public '100% eco-designed products' target structurally unachievable as stated.",
+    image: "/projects/Decathlon_Dashboard.png",
+    tags: [
+      "Python",
+      "BeautifulSoup",
+      "PostgreSQL",
+      "SQL",
+      "Power BI",
+      "Web Scraping",
+      "Git",
+    ],
+    repoUrl: "https://github.com/ABsynced/decathlon-analytics",
+    featured: true,
+  },
+
+  {
     _id: "p1",
     title: "Superstore Sales Analytics",
     description:

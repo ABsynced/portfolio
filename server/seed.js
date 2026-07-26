@@ -4,6 +4,24 @@ const Project = require("./models/Project");
 
 const sampleProjects = [
   {
+    title: "Decathlon Product & Sustainability Analytics",
+    description:
+      "Scraped Decathlon's full product catalog and found only 38.6% is their own in-house brand — making their public '100% eco-designed products' target structurally unachievable as stated.",
+    image: "/projects/Decathlon_Dashboard.png",
+    tags: [
+      "Python",
+      "BeautifulSoup",
+      "PostgreSQL",
+      "SQL",
+      "Power BI",
+      "Web Scraping",
+      "Git",
+    ],
+    repoUrl: "https://github.com/ABsynced/decathlon-analytics",
+    featured: false,
+    order: 1,
+  },
+  {
     title: "Superstore Sales Analytics",
     description:
       "Uncovered a hard discount threshold costing $135K in lost profit, using a PostgreSQL star schema, SQL analysis, and an interactive Power BI dashboard.",
@@ -19,7 +37,7 @@ const sampleProjects = [
     image: "/projects/dashboard_overview.png",
     repoUrl: "https://github.com/ABsynced/superstore-sales-analytics",
     featured: false,
-    order: 1,
+    order: 2,
   },
   {
     title: "Omnifood — Food Subscription Landing Page",
@@ -30,7 +48,7 @@ const sampleProjects = [
     liveUrl: "https://absynced.github.io/Omnifood/",
     repoUrl: "https://github.com/ABsynced/Omnifood",
     featured: false,
-    order: 2,
+    order: 3,
   },
   {
     title: "This Portfolio — MERN Stack Website",
@@ -49,7 +67,7 @@ const sampleProjects = [
     liveUrl: "https://portfolio-mern-ecru-seven.vercel.app/",
     repoUrl: "https://github.com/ABsynced/portfolio-mern",
     featured: false,
-    order: 3,
+    order: 4,
   },
   {
     title: "Coming Soon...",
@@ -57,7 +75,7 @@ const sampleProjects = [
       "Multi-page Power BI dashboard for retail sales performance and trends.",
     tags: ["Power BI", "DAX", "Power Query"],
     featured: false,
-    order: 4,
+    order: 5,
   },
 ];
 
