@@ -88,7 +88,7 @@ export const placeholderProjects = [
     _id: "p5",
     title: "This Portfolio — MERN Stack Website",
     description:
-      "This very site: a full-stack portfolio built with React, Node.js/Express, and MongoDB, styled with Tailwind CSS. Features a live database-backed projects section, working contact form, and a dark glassmorphism design.",
+      "This very site: a full-stack portfolio built with React, Node.js/Express, and MongoDB, styled with Tailwind CSS. Features a live database-backed projects section, a working contact form, and a midnight-blue design.",
     image: "/projects/portfolio-preview.png",
     tags: [
       "React",
