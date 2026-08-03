@@ -34,11 +34,7 @@ export default function Art() {
       </motion.div>
 
       {artPieces.length === 0 && (
-        <p className="mb-6 text-sm text-slate-500">
-          Showing random placeholder photos for now — add your own in{' '}
-          <code className="rounded bg-navy-lightest/60 px-1.5 py-0.5 text-accent">client/src/data/art.js</code> to
-          replace them.
-        </p>
+        <p className="mb-6 text-sm text-slate-500">Here's some art because you made it here :)</p>
       )}
 
       <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">

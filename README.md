@@ -1,59 +1,32 @@
 # Portfolio — MERN + Tailwind
 
-A modern, dark-themed portfolio site with a glassmorphism design, built on the MERN stack (MongoDB, Express, React, Node.js) and Tailwind CSS.
+A dark-themed portfolio site built with React, Vite, and Tailwind CSS. Deployed as a fully
+static site on GitHub Pages — every push to `main` rebuilds and republishes automatically via
+the GitHub Actions workflow in `.github/workflows/deploy.yml`.
 
 ## Structure
 
 ```
 portfolio-mern/
-├── client/   React + Vite + Tailwind CSS frontend
-└── server/   Express + MongoDB backend API
+├── client/   React + Vite + Tailwind CSS frontend (this is what's deployed)
+└── server/   Express + MongoDB API — not used by the live GitHub Pages site
+              (GitHub Pages only serves static files, no Node/DB). Kept here in
+              case a live backend is wired back up later; the frontend already
+              falls back to client/src/data/projects.js when no API is configured.
 ```
 
 ## Quick start
 
-### 1. Backend (server/)
-
-```bash
-cd server
-npm install
-cp .env.example .env
-```
-
-Edit `.env` and set `MONGO_URI` to a MongoDB connection string (free tier at
-[MongoDB Atlas](https://www.mongodb.com/cloud/atlas) works fine).
-
-Seed placeholder projects into the database, then start the API:
-
-```bash
-npm run seed   # populates the projects collection with sample data
-npm run dev    # starts the API on http://localhost:5000
-```
-
-API routes:
-- `GET /api/projects` — list projects
-- `POST /api/projects` — add a project
-- `PUT /api/projects/:id` — update a project
-- `DELETE /api/projects/:id` — remove a project
-- `POST /api/contact` — receive a contact form submission
-- `GET /api/contact` — list received messages
-
-### 2. Frontend (client/)
-
 ```bash
 cd client
 npm install
-cp .env.example .env
-```
-
-Edit `.env` and set `VITE_API_URL` to your backend URL (e.g. `http://localhost:5000/api`).
-If left unset, the site falls back to placeholder project data automatically —
-so it looks complete even before the backend is wired up.
-
-```bash
 npm run dev      # starts the dev server on http://localhost:5173
 npm run build    # builds for production into client/dist
 ```
+
+That's it — no database or API setup needed. The `server/` folder (Express + MongoDB) is
+optional and unused by the deployed site; see the note in **Structure** above if you want
+to revive it for a live database-backed projects section or contact form.
 
 ## Making it yours
 
@@ -65,13 +38,21 @@ npm run build    # builds for production into client/dist
 
 ## Deployment
 
-- **Frontend**: deploy `client/` to [Vercel](https://vercel.com) or [Netlify](https://netlify.com) (set `VITE_API_URL` as an environment variable there).
-- **Backend**: deploy `server/` to [Render](https://render.com) or [Railway](https://railway.app) (set `MONGO_URI`, `PORT`, `CLIENT_URL` as environment variables).
-- **Database**: [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) free tier.
+Static hosting on **GitHub Pages**, auto-deployed on every push to `main`:
+
+1. In the repo's GitHub settings → **Pages**, set Source to **GitHub Actions** (one-time setup).
+2. Push to `main` — the `Deploy to GitHub Pages` workflow builds `client/` and publishes `client/dist`.
+3. Site goes live at `https://<your-username>.github.io/portfolio-mern/`.
+
+`client/vite.config.js` sets `base: '/portfolio-mern/'` to match that URL path — if you ever
+rename the repo, update this to match.
+
+No `VITE_API_URL` is needed; the site runs entirely on the placeholder data in
+`client/src/data/projects.js`, and the contact section is a `mailto:` link instead of a live form.
 
 ## Design
 
-Dark background with animated gradient blobs, glassmorphism cards (frosted blur + subtle border),
-gradient accent text, and scroll-triggered fade/slide animations via Framer Motion.
-Colors and fonts are centralized in `client/src/index.css` — tweak the gradient stops
-(`from-fuchsia-500 to-cyan-500`) or swap the Google Fonts link in `index.html` to restyle everything at once.
+Near-black background (`#05060a`) with animated gradient blobs, bordered cards, a violet accent
+(`#a78bfa`), gradient hero name text (fuchsia → violet → cyan), and scroll-triggered fade/slide
+animations via Framer Motion. Colors and fonts are centralized in `client/src/index.css` — the
+`@theme` block at the top controls the palette site-wide.
