@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
-import { FiChevronRight } from 'react-icons/fi';
+import { FiChevronRight, FiDownload } from 'react-icons/fi';
 import { profile, skills } from '../data/profile';
 import SectionHeading from './SectionHeading';
+import { asset } from '../utils/asset';
 
 // Flatten the categorized skills into one simple list, matching the
 // reference site's plain "technologies I work with" grid.
@@ -67,12 +68,24 @@ export default function About() {
           className="order-first md:order-last"
         >
           <img
-            src="/pic.jpg"
+            src={asset('/pic.jpg')}
             alt="Achraf Benhammadi"
             className="w-full rounded-xl border border-navy-lightest object-cover"
           />
         </motion.div>
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-80px' }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="mt-10"
+      >
+        <a href={asset(profile.resumeUrl)} download className="btn-outline">
+          <FiDownload /> Download CV (PDF)
+        </a>
+      </motion.div>
     </section>
   );
 }

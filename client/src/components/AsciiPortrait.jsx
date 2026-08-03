@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from "react";
+import { asset } from "../utils/asset";
 
 // Ported from gazijarin/Gazi-V2 (src/components/AsciiPortrait.jsx), adapted to
 // use this site's background-removed photo (/pic-cutout.png) and a smaller max
@@ -125,7 +126,7 @@ const AsciiPortrait = ({ maxSize = 300 }) => {
 
     const img = new Image();
     img.crossOrigin = "Anonymous";
-    img.src = "/pic-cutout.png";
+    img.src = asset("/pic-cutout.png");
     img.onload = () => {
       const raw = processImage(img, size);
       memoryCache[size] = raw;

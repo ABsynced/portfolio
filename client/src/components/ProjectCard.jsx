@@ -1,11 +1,12 @@
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
+import { asset } from '../utils/asset';
 
 export default function ProjectCard({ project }) {
   return (
     <div className="card overflow-hidden">
       <div className="flex aspect-video items-center justify-center bg-navy-lightest/40">
         {project.image ? (
-          <img src={project.image} alt={project.title} className="h-full w-full object-cover" />
+          <img src={asset(project.image)} alt={project.title} className="h-full w-full object-cover" />
         ) : (
           <span className="font-display text-4xl font-bold text-slate-600">
             {project.title.slice(0, 2).toUpperCase()}

@@ -15,7 +15,7 @@ In every project, I focus on clarity, precision, and genuinely understanding the
   location: "Frankfurt am Main, Germany",
   email: "ABsynced@gmail.com",
   whatsapp: "+49 15510 293089",
-  resumeUrl: "#",
+  resumeUrl: "/cv.pdf",
   social: {
     github: "https://github.com/ABsynced",
     linkedin: "https://www.linkedin.com/in/achrafbenhammadi/",
