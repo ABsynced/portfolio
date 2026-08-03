@@ -7,7 +7,7 @@ the GitHub Actions workflow in `.github/workflows/deploy.yml`.
 ## Structure
 
 ```
-portfolio-mern/
+portfolio/
 ├── client/   React + Vite + Tailwind CSS frontend (this is what's deployed)
 └── server/   Express + MongoDB API — not used by the live GitHub Pages site
               (GitHub Pages only serves static files, no Node/DB). Kept here in
@@ -42,9 +42,9 @@ Static hosting on **GitHub Pages**, auto-deployed on every push to `main`:
 
 1. In the repo's GitHub settings → **Pages**, set Source to **GitHub Actions** (one-time setup).
 2. Push to `main` — the `Deploy to GitHub Pages` workflow builds `client/` and publishes `client/dist`.
-3. Site goes live at `https://<your-username>.github.io/portfolio-mern/`.
+3. Site goes live at `https://<your-username>.github.io/portfolio/`.
 
-`client/vite.config.js` sets `base: '/portfolio-mern/'` to match that URL path — if you ever
+`client/vite.config.js` sets `base: '/portfolio/'` to match that URL path — if you ever
 rename the repo, update this to match.
 
 No `VITE_API_URL` is needed; the site runs entirely on the placeholder data in

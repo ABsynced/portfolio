@@ -86,21 +86,19 @@ export const placeholderProjects = [
   },
   {
     _id: "p5",
-    title: "This Portfolio — MERN Stack Website",
+    title: "This Portfolio — React + Tailwind Website",
     description:
-      "This very site: a full-stack portfolio built with React, Node.js/Express, and MongoDB, styled with Tailwind CSS. Features a live database-backed projects section, a working contact form, and a midnight-blue design.",
+      "This very site: a full-stack-built portfolio (originally MERN) now deployed as a static React + Tailwind site on GitHub Pages, with a particle-effect hero, an interactive experience/projects layout, and a violet-accented near-black design.",
     image: "/projects/portfolio-preview.png",
     tags: [
       "React",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "Tailwind CSS",
       "Vite",
+      "Tailwind CSS",
       "Framer Motion",
+      "GitHub Actions",
     ],
-    liveUrl: "https://portfolio-mern-ecru-seven.vercel.app/",
-    repoUrl: "https://github.com/ABsynced/portfolio-mern",
+    liveUrl: "https://absynced.github.io/portfolio/",
+    repoUrl: "https://github.com/ABsynced/portfolio",
     featured: true,
   },
   // {

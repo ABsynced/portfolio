@@ -1,4 +1,4 @@
-// GitHub Pages serves this site from /portfolio-mern/, not the domain root
+// GitHub Pages serves this site from /portfolio/, not the domain root
 // (see vite.config.js's `base`), but plain string image paths like
 // "/projects/foo.png" in data files are just runtime strings — Vite has no
 // way to rewrite those automatically the way it rewrites index.html or
