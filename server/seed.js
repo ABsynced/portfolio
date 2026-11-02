@@ -4,6 +4,25 @@ const Project = require("./models/Project");
 
 const sampleProjects = [
   {
+    title: "Mehrsicht — AI Media Bias & Fact-Check Comparison",
+    description:
+      "Fully automated pipeline that pulls news from 23 German and European outlets, uses an LLM to cluster stories and compare how left, centre and right media frame the same event, and surfaces real fact-checker verdicts, all running on free tiers with no server or database.",
+    image: "/projects/mehrsicht-preview.jpg",
+    tags: [
+      "Python",
+      "LLM (Groq)",
+      "RSS",
+      "Jinja2",
+      "Playwright",
+      "GitHub Actions",
+      "Static Site",
+    ],
+    liveUrl: "https://absynced.github.io/mehrsicht/",
+    repoUrl: "https://github.com/ABsynced/mehrsicht",
+    featured: true,
+    order: 0,
+  },
+  {
     title: "Decathlon Product & Sustainability Analytics",
     description:
       "Scraped Decathlon's full product catalog and found only 38.6% is their own in-house brand — making their public '100% eco-designed products' target structurally unachievable as stated.",
